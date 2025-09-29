@@ -1,0 +1,26 @@
+<style>
+    img{
+            width: 100%;
+    height: auto;
+    }
+</style>
+<h2 style="color:red">Hello from the CLI</h2>
+{{ section.settings.image | image_url : width : section.settings.image.width | image_tag  }}
+
+{% schema %}
+{
+  "name": "Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image"
+    }
+  ]
+}
+{% endschema %}
